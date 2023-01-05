@@ -12,7 +12,7 @@ interface AstronomyDAO {
     fun getAllAstronomy(): List<AstronomyBean>
 
     @Insert
-    fun insertAll(resources: List<AstronomyBean>)
+    fun insertAll(astronomyList: List<AstronomyBean>)
 
     @Query("DELETE FROM astronomy")
     fun deleteAll()

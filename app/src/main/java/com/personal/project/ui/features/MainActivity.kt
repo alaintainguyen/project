@@ -1,4 +1,4 @@
-package com.personal.project.features
+package com.personal.project.ui.features
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

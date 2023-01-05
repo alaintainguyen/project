@@ -13,11 +13,12 @@ class AstronomyRepositoryImpl(
     private val service: AstronomyService,
 ): AstronomyRepository {
 
-    val apiKey = BuildConfig.ASTRONOMY_API_KEY
+    private val apiKey = BuildConfig.ASTRONOMY_API_KEY
 
     override suspend fun getAstronomyList(startDate: String, endDate: String): List<AstronomyBean> {
         return service.getAstronomyList(apiKey, startDate, endDate)
     }
+
     override fun setCache(astronomyList: List<AstronomyBean>) {
         astronomyDAO.deleteAll()
         astronomyDAO.insertAll(astronomyList)

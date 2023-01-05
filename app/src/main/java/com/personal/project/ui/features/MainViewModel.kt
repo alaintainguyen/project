@@ -1,4 +1,4 @@
-package com.personal.project.features
+package com.personal.project.ui.features
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -31,6 +31,7 @@ class MainViewModel @Inject constructor(private val astronomyRepository: Astrono
             try {
                 val response = astronomyRepository.getAstronomyList(getDateMinus10(), getCurrentDate())
                 _stateFlow.value = _stateFlow.value.copy(astronomyList = response)
+                astronomyRepository.setCache(response)
             } catch(e: Exception) {
                 _stateFlow.value = _stateFlow.value.copy(errorMessage = e.message)
             }

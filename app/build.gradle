@@ -25,7 +25,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField("String", "ASTRONOMY_API_KEY", "\"QBWd8omyNFXPFDpOoZxL0CuXWO8eMjzzKsmgM7Lx\"")
+        }
         release {
+            buildConfigField("String", "ASTRONOMY_API_KEY", "\"QBWd8omyNFXPFDpOoZxL0CuXWO8eMjzzKsmgM7Lx\"")
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }

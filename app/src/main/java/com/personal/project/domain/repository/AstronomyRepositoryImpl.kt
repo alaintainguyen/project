@@ -1,5 +1,6 @@
 package com.personal.project.domain.repository
 
+import com.personal.project.BuildConfig
 import com.personal.project.domain.database.AstronomyDAO
 import com.personal.project.domain.database.AstronomyDatabase
 import com.personal.project.domain.model.AstronomyBean
@@ -12,7 +13,7 @@ class AstronomyRepositoryImpl(
     private val service: AstronomyService,
 ): AstronomyRepository {
 
-    override suspend fun getNasaApi(): AstronomyBean = service.getNasaApi()
+    override suspend fun getNasaApi(): AstronomyBean = service.getNasaApi(BuildConfig.ASTRONOMY_API_KEY)
     override suspend fun getAstronomyList(startDate: String, endDate: String): List<AstronomyBean> {
         return service.getAstronomyList(startDate, endDate)
     }

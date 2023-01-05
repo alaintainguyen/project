@@ -21,7 +21,7 @@ class MainViewModel @Inject constructor(
 
     fun getNasaApi() {
         viewModelScope.launch(Dispatchers.Main) {
-            val value = astronomyRepository.getAstronomyList(getCurrentDate(), getDateMinus10())
+            val value = astronomyRepository.getNasaApi()
             val toto = ""
         }
     }

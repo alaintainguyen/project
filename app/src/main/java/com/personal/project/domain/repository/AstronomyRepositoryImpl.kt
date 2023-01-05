@@ -19,7 +19,7 @@ class AstronomyRepositoryImpl(
         return service.getAstronomyList(apiKey, startDate, endDate)
     }
 
-    override fun setCache(astronomyList: List<AstronomyBean>) {
+    override fun setDatabase(astronomyList: List<AstronomyBean>) {
         astronomyDAO.deleteAll()
         astronomyDAO.insertAll(astronomyList)
     }

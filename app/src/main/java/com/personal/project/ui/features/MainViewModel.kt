@@ -31,7 +31,7 @@ class MainViewModel @Inject constructor(private val astronomyRepository: Astrono
             try {
                 val response = astronomyRepository.getAstronomyList(getDateMinus10(), getCurrentDate())
                 _stateFlow.value = _stateFlow.value.copy(astronomyList = response)
-                astronomyRepository.setCache(response)
+                astronomyRepository.setDatabase(response)
             } catch(e: Exception) {
                 _stateFlow.value = _stateFlow.value.copy(errorMessage = e.message)
             }

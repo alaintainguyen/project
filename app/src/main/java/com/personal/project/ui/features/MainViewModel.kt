@@ -19,11 +19,10 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(private val astronomyRepository: AstronomyRepository) : ViewModel() {
 
-    private val eventChannel = Channel<MainEvent>(Channel.UNLIMITED)
-    val eventsFlow = eventChannel.receiveAsFlow()
-
     private val _stateFlow = MutableStateFlow(UiState())
+    private val eventChannel = Channel<MainEvent>(Channel.UNLIMITED)
 
+    val eventsFlow = eventChannel.receiveAsFlow()
     val uiState: StateFlow<UiState> = _stateFlow
 
     fun getNasaApi() {
@@ -31,7 +30,7 @@ class MainViewModel @Inject constructor(private val astronomyRepository: Astrono
             try {
                 val response = astronomyRepository.getAstronomyList(getDateMinus10(), getCurrentDate())
                 _stateFlow.value = _stateFlow.value.copy(astronomyList = response)
-                astronomyRepository.setDatabase(response)
+                //astronomyRepository.setDatabase(response)
             } catch(e: Exception) {
                 _stateFlow.value = _stateFlow.value.copy(errorMessage = e.message)
             }

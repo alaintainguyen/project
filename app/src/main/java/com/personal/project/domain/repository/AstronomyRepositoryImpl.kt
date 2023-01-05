@@ -8,12 +8,16 @@ import com.personal.project.network.AstronomyService
 import io.reactivex.Observable
 
 class AstronomyRepositoryImpl(
-    private val astronomyDAO: AstronomyDAO,
-    private val astronomyDatabase: AstronomyDatabase,
+    private var astronomyDAO: AstronomyDAO,
+    astronomyDatabase: AstronomyDatabase,
     private val service: AstronomyService,
 ): AstronomyRepository {
 
     private val apiKey = BuildConfig.ASTRONOMY_API_KEY
+
+    init {
+        astronomyDAO = astronomyDatabase.astronomyDAO()
+    }
 
     override suspend fun getAstronomyList(startDate: String, endDate: String): List<AstronomyBean> {
         return service.getAstronomyList(apiKey, startDate, endDate)

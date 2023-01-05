@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.tvMessage.text = "Hello MainActivity"
+        binding.tvMessage.text = "Hello Tailloute"
         viewModel.getNasaApi()
     }
 }

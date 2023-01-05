@@ -90,6 +90,11 @@ dependencies {
     implementation("com.google.android.material:compose-theme-adapter:1.2.1")
     implementation("androidx.compose.material:material:1.4.0-alpha03")
 
+    // Flipper dev tools
+    implementation("com.facebook.soloader:soloader:0.10.4")
+    implementation("com.facebook.flipper:flipper:0.176.0")
+    implementation("com.facebook.flipper:flipper-network-plugin:0.176.0")
+
     // Test implementation
     testImplementation 'junit:junit:4.13.2'
 

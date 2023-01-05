@@ -4,6 +4,9 @@
 # temp files
 *~*
 
+.*
+!/.gitignore
+
 # generated files
 build/
 

@@ -1,9 +1,9 @@
-package com.personal.projectapplication.network
+package com.personal.project.network
 
-import com.personal.projectapplication.model.Astronomy
+import com.personal.project.model.Astronomy
 import retrofit2.http.GET
 
-interface ProjectService {
+interface AstronomyService {
     @GET("apod?api_key=QBWd8omyNFXPFDpOoZxL0CuXWO8eMjzzKsmgM7Lx")
     suspend fun getNasaApi(): Astronomy
 }

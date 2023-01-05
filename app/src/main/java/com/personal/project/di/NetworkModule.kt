@@ -1,9 +1,9 @@
-package com.personal.projectapplication.di
+package com.personal.project.di
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
-import com.personal.projectapplication.BASE_URL
-import com.personal.projectapplication.network.ProjectService
+import com.personal.project.BASE_URL
+import com.personal.project.network.AstronomyService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -33,12 +33,12 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideRetrofit(gson: Gson, okHttpClient: OkHttpClient): ProjectService =
+    fun provideRetrofit(gson: Gson, okHttpClient: OkHttpClient): AstronomyService =
         Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create(gson))
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .baseUrl(BASE_URL)
             .client(okHttpClient)
             .build()
-            .create(ProjectService::class.java)
+            .create(AstronomyService::class.java)
 }

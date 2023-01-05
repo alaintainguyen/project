@@ -13,9 +13,10 @@ class AstronomyRepositoryImpl(
     private val service: AstronomyService,
 ): AstronomyRepository {
 
-    override suspend fun getNasaApi(): AstronomyBean = service.getNasaApi(BuildConfig.ASTRONOMY_API_KEY)
+    val apiKey = BuildConfig.ASTRONOMY_API_KEY
+
     override suspend fun getAstronomyList(startDate: String, endDate: String): List<AstronomyBean> {
-        return service.getAstronomyList(startDate, endDate)
+        return service.getAstronomyList(apiKey, startDate, endDate)
     }
     override fun setCache(astronomyList: List<AstronomyBean>) {
         astronomyDAO.deleteAll()

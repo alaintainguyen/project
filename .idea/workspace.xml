@@ -10,13 +10,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="000b5e5c-88ab-4b2d-b518-14e2a3ad3bff" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/personal/project/domain/database/AstronomyDAO.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/personal/project/database/AstronomyDAO.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/personal/project/database/AstronomyDB.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/personal/project/di/AppModule.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/personal/project/di/AppModule.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/personal/project/features/MainViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/personal/project/features/MainViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/personal/project/model/Astronomy.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/personal/project/model/Astronomy.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/personal/project/repository/AstronomyRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/personal/project/repository/AstronomyRepository.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/personal/project/repository/AstronomyRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/personal/project/repository/AstronomyRepositoryImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/personal/project/model/Astronomy.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/personal/project/domain/model/AstronomyBean.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/personal/project/network/AstronomyService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/personal/project/network/AstronomyService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/personal/project/repository/AstronomyRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/personal/project/domain/repository/AstronomyRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/personal/project/repository/AstronomyRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/personal/project/domain/repository/AstronomyRepositoryImpl.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,6 +91,7 @@
       <recent name="$PROJECT_DIR$/app/src/main/java/com/personal/projectapplication" />
     </key>
     <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.personal.project.domain.cache" />
       <recent name="com.personal.project.repository" />
       <recent name="com.personal.project.database" />
       <recent name="com.personal.projectapplication.features" />
@@ -174,16 +185,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/personal/project/features/MainViewModel.kt</url>
-          <line>20</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

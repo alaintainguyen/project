@@ -4,11 +4,11 @@ import android.app.Application
 import android.content.Context
 import androidx.room.Room
 import com.personal.project.ProjectApplication
-import com.personal.project.database.AstronomyDAO
-import com.personal.project.database.AstronomyDB
+import com.personal.project.domain.database.AstronomyDAO
+import com.personal.project.domain.database.AstronomyDatabase
+import com.personal.project.domain.repository.AstronomyRepository
+import com.personal.project.domain.repository.AstronomyRepositoryImpl
 import com.personal.project.network.AstronomyService
-import com.personal.project.repository.AstronomyRepository
-import com.personal.project.repository.AstronomyRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -31,12 +31,16 @@ object AppModule {
 
     @Provides
     fun provideAstronomyDB(context: Context) =
-        Room.databaseBuilder(context, AstronomyDB::class.java, "astronomy").build()
+        Room.databaseBuilder(context, AstronomyDatabase::class.java, "astronomy-database").build()
 
     @Provides
-    fun provideAstronomyDAO(astronomyDB: AstronomyDB) = astronomyDB.astronomyDAO()
+    fun provideAstronomyDAO(astronomyDB: AstronomyDatabase) = astronomyDB.astronomyDAO()
 
     @Provides
-    fun provideAstronomyRepository(astronomyDAO: AstronomyDAO, service: AstronomyService): AstronomyRepository =
-        AstronomyRepositoryImpl(astronomyDAO, service)
+    fun provideAstronomyRepository(
+        astronomyDAO: AstronomyDAO,
+        astronomyDB: AstronomyDatabase,
+        service: AstronomyService,
+    ): AstronomyRepository =
+        AstronomyRepositoryImpl(astronomyDAO, astronomyDB, service)
 }

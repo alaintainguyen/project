@@ -1,12 +1,11 @@
-package com.personal.project.model
+package com.personal.project.domain.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
-import java.time.LocalDate
 
-@Entity
-data class Astronomy(
+@Entity(tableName = "astronomy")
+data class AstronomyBean(
     @SerializedName("title")
     var title: String = "",
 

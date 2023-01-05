@@ -57,7 +57,6 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion")
     implementation("androidx.fragment:fragment-ktx:1.5.5")
     implementation("androidx.lifecycle:lifecycle-common-java8:$lifecycleVersion")
-    implementation("androidx.multidex:multidex:2.0.1")
 
     // OKHttp
     implementation("com.squareup.okhttp3:okhttp:4.10.0")

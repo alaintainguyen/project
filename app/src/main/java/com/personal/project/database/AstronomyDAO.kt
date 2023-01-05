@@ -1,4 +1,4 @@
-package com.personal.project.model
+package com.personal.project.database
 
 import androidx.room.Dao
 

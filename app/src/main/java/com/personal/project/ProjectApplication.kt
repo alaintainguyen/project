@@ -1,7 +1,7 @@
 package com.personal.project
 
-import androidx.multidex.MultiDexApplication
+import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class ProjectApplication: MultiDexApplication()
+class ProjectApplication: Application()

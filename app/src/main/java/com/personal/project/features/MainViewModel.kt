@@ -2,7 +2,7 @@ package com.personal.project.features
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.personal.project.model.AstronomyRepository
+import com.personal.project.repository.AstronomyRepository
 import com.personal.project.network.AstronomyService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

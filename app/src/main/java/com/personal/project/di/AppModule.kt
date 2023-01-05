@@ -4,10 +4,10 @@ import android.app.Application
 import android.content.Context
 import androidx.room.Room
 import com.personal.project.ProjectApplication
-import com.personal.project.model.AstronomyDAO
-import com.personal.project.model.AstronomyDB
-import com.personal.project.model.AstronomyRepository
-import com.personal.project.model.AstronomyRepositoryImpl
+import com.personal.project.database.AstronomyDAO
+import com.personal.project.database.AstronomyDB
+import com.personal.project.repository.AstronomyRepository
+import com.personal.project.repository.AstronomyRepositoryImpl
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

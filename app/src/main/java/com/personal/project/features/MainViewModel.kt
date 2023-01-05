@@ -17,7 +17,7 @@ class MainViewModel @Inject constructor(
 
     fun getNasaApi() {
         viewModelScope.launch(Dispatchers.Main) {
-            val value = astronomyRepository.getNasaApi(service)
+            val value = astronomyRepository.getNasaApi()
             value.title
         }
     }

@@ -3,6 +3,7 @@ package com.personal.project.model
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
+import java.time.LocalDate
 
 @Entity
 data class Astronomy(
@@ -20,7 +21,7 @@ data class Astronomy(
 
     @PrimaryKey
     @SerializedName("date")
-    var date: String = "",
+    val date: String = "",
 
     @SerializedName("media_type")
     var mediaType: String = ""
